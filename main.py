@@ -70,7 +70,7 @@ def main():
                     break
     else:
         source = sr.Microphone(sample_rate=16000)
-    #source = sr.Microphone(sample_rate=16000)
+    source = sr.Microphone(sample_rate=16000)
     # Load / Download model
     model = args.model
     if args.model != "large" and not args.non_english:
@@ -91,8 +91,8 @@ def main():
     temp_file = NamedTemporaryFile().name
     transcription = ['']
 
-    with sr.Microphone(sample_rate=16000) as source:
-        recorder.adjust_for_ambient_noise(source)
+    #with sr.Microphone(sample_rate=16000) as source:
+    #    recorder.adjust_for_ambient_noise(source)
 
     def record_callback(_, audio:sr.AudioData) -> None:
         """
