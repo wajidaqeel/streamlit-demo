@@ -35,7 +35,8 @@ def main():
     args = parser.parse_args()
 
 
-
+    print(f"MICs Found on this Computer: \n {sr.Microphone.list_microphone_names()}")
+    break
 
 
 
