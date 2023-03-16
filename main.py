@@ -80,7 +80,7 @@ def main():
     devices = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
     print("checking devices")
     print(devices)
-    print(source)
+  #  print(source)
     audio_model = whisper.load_model("small" ,device = devices)
 
     print(torch.cuda.is_available())
