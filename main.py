@@ -90,8 +90,8 @@ def main():
 
     temp_file = NamedTemporaryFile().name
     transcription = ['']
-    
-    with source:
+
+    with sr.Microphone(sample_rate=16000) as source:
         recorder.adjust_for_ambient_noise(source)
 
     def record_callback(_, audio:sr.AudioData) -> None:
