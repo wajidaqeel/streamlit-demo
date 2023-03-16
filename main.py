@@ -68,7 +68,7 @@ def main():
                     break
     else:
         source = sr.Microphone(sample_rate=16000)
-        
+    source = sr.Microphone(sample_rate=16000)
     # Load / Download model
     model = args.model
     if args.model != "large" and not args.non_english:
