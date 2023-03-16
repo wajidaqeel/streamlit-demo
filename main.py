@@ -76,10 +76,13 @@ def main():
     #DEVICE = 'cuda'
 
     devices = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
+    print("checking devices")
     print(devices)
+    print(source)
     audio_model = whisper.load_model("small" ,device = devices)
 
     print(torch.cuda.is_available())
+    print("waiting")
     record_timeout = args.record_timeout
     phrase_timeout = args.phrase_timeout
 
